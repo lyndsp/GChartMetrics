@@ -1,6 +1,4 @@
-﻿google.load('visualization', '1', { packages: ['annotatedtimeline'] });
-
-function drawVisualization() {
+﻿function massageData() {
     var stories = getStoryData();
 
     var today = new Date(2013, 5, 11);
@@ -35,10 +33,7 @@ function drawVisualization() {
       sprints.push(sprint);        
     }
 
-    var sprintData = new google.visualization.DataTable();
-    sprintData.addColumn('date', 'Sprint Date');
-    sprintData.addColumn('number', 'Stories per Sprint');
-    sprintData.addColumn('number', 'Stories per Person');
+    var sprintData = [];
 
     while (sprints.length > 0) {
         var currentSprint = sprints.pop();
@@ -53,12 +48,10 @@ function drawVisualization() {
 
         var storiesPerPerson = currentSprint.TeamSize == 0 ? 0 : storiesInSprint / currentSprint.TeamSize;
 
-        sprintData.addRow([currentSprint.StartDate, storiesInSprint, storiesPerPerson]);
+        sprintData.push(
+            { StartDate: currentSprint.StartDate, StoriesInSprint: storiesInSprint, StoriesPerPerson: storiesPerPerson }
+        );
     }
 
-    var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
-        document.getElementById('visualization'));
-    annotatedtimeline.draw(sprintData, { 'displayAnnotations': true });
+    return sprintData;
 }
-
-google.setOnLoadCallback(drawVisualization);
