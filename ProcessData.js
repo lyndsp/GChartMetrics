@@ -3,8 +3,9 @@
 function drawVisualization() {
     var stories = getStoryData();
 
-    var today = new Date();
-    var nextSprintDate = new Date(2013, 5, 9);
+    var today = new Date(2013, 5, 11);
+    //var today = new Date();
+    var nextSprintDate = new Date(2013, 4, 13);
     var sprints = [];
     var teamSizeData = getTeamData();
 
