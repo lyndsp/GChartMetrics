@@ -57,10 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintTable.js" />
+    <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintGraph.js" />
+    <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintTable.html" />
     <Content Include="Functions.js" />
     <Content Include="TeamData.js" />
-    <Content Include="Metrics.html" />
-    <Content Include="ProcessData.js" />
+    <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintGraph.html" />
+    <Content Include="StoriesPerPersonPerSprint\CalculateStoriesPerPersonPerSprint.js" />
     <Content Include="StoryData.js" />
     <Content Include="Web.config" />
   </ItemGroup>
