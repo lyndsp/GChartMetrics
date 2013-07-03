@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CycleTimeGraph\CalculateCycleTime.js" />
+    <Content Include="CycleTimeGraph\StoriesPerPersonPerSprintGraph.html" />
+    <Content Include="CycleTimeGraph\StoriesPerPersonPerSprintGraph.js" />
+    <Content Include="CycleTimeGraph\StoriesPerPersonPerSprintTable.html" />
+    <Content Include="CycleTimeGraph\StoriesPerPersonPerSprintTable.js" />
     <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintTable.js" />
     <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintGraph.js" />
     <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintTable.html" />
