@@ -1,4 +1,5 @@
-﻿google.load('visualization', '1', { packages: ['annotatedtimeline'] });
+﻿google.load('visualization', '1', { packages: ['corechart'] });
+
 
 function drawVisualization() {
 
@@ -6,17 +7,24 @@ function drawVisualization() {
 
     var cycleDataTable = new google.visualization.DataTable();
     cycleDataTable.addColumn('date', 'Accepted Date');
-    cycleDataTable.addColumn('number', 'Cycle Time');
-    
+    cycleDataTable.addColumn('number', 'Cycle Time: Team 1');
+    cycleDataTable.addColumn('number', 'Cycle Time: Team 2');
 
-    while (cycleData.length > 1) {
+
+    while (cycleData.length > 0) {
         var row = cycleData.pop();
-        cycleDataTable.addRow([row.AcceptedDate, row.CycleTime]);
+                  cycleDataTable.addRow([row.AcceptedDate, row.CycleTime1, row.CycleTime2]);
+              
     }
 
-    var annotatedtimeline = new google.visualization.AnnotatedTimeLine(
-        document.getElementById('visualization'));
-    annotatedtimeline.draw(cycleDataTable, { 'displayAnnotations': true });
-}
+        var options = {
+            title: "Cycle Times",
+            color: "red",
+        }
 
-google.setOnLoadCallback(drawVisualization);
+        var chart = new google.visualization.ScatterChart(
+            document.getElementById('visualization'));
+        chart.draw(cycleDataTable, options, { 'displayAnnotations': true });
+    }
+
+    google.setOnLoadCallback(drawVisualization);
