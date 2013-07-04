@@ -7,8 +7,8 @@ function drawVisualization() {
 
     var cycleDataTable = new google.visualization.DataTable();
     cycleDataTable.addColumn('date', 'Accepted Date');
-    cycleDataTable.addColumn('number', 'Cycle Time: Team 1');
-    cycleDataTable.addColumn('number', 'Cycle Time: Team 2');
+    cycleDataTable.addColumn('number', 'Team 1');
+    cycleDataTable.addColumn('number', 'Team 2');
 
 
     while (cycleData.length > 0) {
@@ -17,10 +17,11 @@ function drawVisualization() {
               
     }
 
-        var options = {
-            title: "Cycle Times",
-            color: "red",
-        }
+    var options = {
+        title: "Cycle Times",
+        hAxis: { title: "Date" },
+        vAxis: { title: "Cycle Time: Days" }
+    };
 
         var chart = new google.visualization.ScatterChart(
             document.getElementById('visualization'));
