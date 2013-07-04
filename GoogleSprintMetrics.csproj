@@ -58,8 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CycleTimeGraph\CalculateCycleTime.js" />
-    <Content Include="CycleTimeGraph\StoriesPerPersonPerSprintGraph.html" />
-    <Content Include="CycleTimeGraph\StoriesPerPersonPerSprintGraph.js" />
+    <Content Include="CycleTimeGraph\CycleTimeGraph.html" />
+    <Content Include="CycleTimeGraph\CycleTimeGraph.js" />
     <Content Include="CycleTimeGraph\CycleTimeTable.html" />
     <Content Include="CycleTimeGraph\CycleTimeTable.js" />
     <Content Include="StoriesPerPersonPerSprint\StoriesPerPersonPerSprintTable.js" />
