@@ -4,10 +4,10 @@
 
     var tableHtml = "<table><thead><tr><th>Accepted Date of Story</th><th>Story Cycle Time</th></tr></thead>";
 
-    while (sprintData.length > 1) {
+    while (sprintData.length > 0) {
         var row = sprintData.pop();
 
-        tableHtml += "<tr><td>" + row.AcceptedDate.toDateString() + "</td>"
+        tableHtml += "<tr><td>" + row.AcceptedDate.toDateString() +"</td>"
             + "<td>" + row.CycleTime + "</td>"
             + "</tr>";
     }
